@@ -12,6 +12,7 @@ INSTALL
 ===
 
 sudo sh install.sh
+
 Only newly created terminal will have the change at this point (or you can source your .bashrc to enable
 mhbm in your cirrent one)
 
@@ -19,13 +20,16 @@ USAGE
 ===
 
 mhbm BUFFERNAME 
+
 Create a buffer named BUFFERNAME. If BUFFERNAME exists its history
 content will be read.
 
 mhbm -d BUFFERNAME
+
 Delete BUFFERNAME if it exists. Terminal using this buffer will no longer write their
 history, and every new command will be lost.
 
 mhbm default
+
 The history file specified by $HISTFILE (default history file) will be use. Restore the
 $PS1
