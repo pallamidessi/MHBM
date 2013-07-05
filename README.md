@@ -11,7 +11,9 @@ A ncurse gui to manage the content of buffer.
 INSTALL
 ===
 
-(sudo) make install
+sudo sh install.sh
+Only newly created terminal will have the change at this point (or you can source your .bashrc to enable
+mhbm in your cirrent one)
 
 USAGE
 ===
