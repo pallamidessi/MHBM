@@ -1,0 +1,35 @@
+.\" Manpage for mhbm.
+.\" Contact pallamidessi@etu.unistra.fr to correct errors,typos,bug or feature request.
+.TH man 7 "05 July 2013" "0.1" "mhbm man page"
+.SH NAME
+mhbm \- Multiple History Buffer Manager - Create and switch between user created history buffer.
+.SH SYNOPSIS
+mhbm [BUFFER_NAME]
+.SH DESCRIPTION
+User can create and switch between multiple history buffers.
+.br
+Buffers are shared between all terminal instance, but need a
+.br
+prompt command to be refresh (such as pressing the Enterkey).
+.br
+By default, buffer set HISTCONTROL with ignoredups and erasedups,
+.br
+but can be disable through option. Buffers file are kept in $HOME/.mhbm.
+.SH OPTIONS
+.TP 
+-i 
+Do not use HISTCONTROL with ignoredups.
+.TP 
+-e 
+Do not use HISTCONTROL with erasedups.
+.TP 
+-d [BUFFER_NAME] 
+Delete the specified buffer file.
+.TP 
+-h 
+Show this manpage.
+.SH SEE ALSO
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Pallamidessi Joseph (pallamidessi@etu.unistra.fr)
