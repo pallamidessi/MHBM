@@ -1,2 +1,3 @@
 install:
-	source install.sh
+	sudo sh install.sh
+	source ~/.bashrc

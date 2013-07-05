@@ -11,14 +11,16 @@ if [ ! -f $HOME/.bashrc ]; then
 fi
 
 
-echo' echo "$PS1" > ~/.mhbm/ps1 
-alias mhbm=\'source /usr/local/bin/mhbm.sh\'
-export PATH=$PATH:/usr/local/bin
-' > $HOME/.bashrc
+echo 'echo "$PS1" > ~/.mhbm/ps1' >> $HOME/.bashrc
+echo "alias mhbm='source /usr/local/bin/mhbm.sh'" >> $HOME/.bashrc
+echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
 
-install -g 0 -o 0 -m 0644 mhbm /usr/local/man/man8/
-gzip /usr/local/man/man8/mhbm
+if [ ! -d /usr/local/man/man7/  ]; then
+	mkdir /usr/local/man/man7/ 
+fi
 
-source $home/.bashrc
+install -g 0 -o 0 -m 0644 mhbm.7 /usr/local/man/man7/
+gzip /usr/local/man/man7/mhbm.7
+
 
 
