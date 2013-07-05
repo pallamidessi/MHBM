@@ -66,7 +66,7 @@
 			history -r "$HOME/.mhbm/$BUFFERNAME" ;
 		fi
 		export PROMPT_COMMAND="history -n $HOME/.mhbm/$BUFFERNAME;history -w $HOME/.mhbm/$BUFFERNAME;history -c $HOME/.mhbm/$BUFFERNAME;history -r $HOME/.mhbm/$BUFFERNAME";
-		export PS1="`cat $HOME/.mhbm/ps1`\033[31m[$BUFFERNAME]\033[0m ";
+		export PS1="`cat $HOME/.mhbm/ps1`\[\033[31m\]$BUFFERNAME\[\033[0m\] ";
 	fi
 
 
